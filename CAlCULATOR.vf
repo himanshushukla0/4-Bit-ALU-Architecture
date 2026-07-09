@@ -1,0 +1,1976 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : CAlCULATOR.vf
+// /___/   /\     Timestamp : 07/06/2026 07:29:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog /home/ise/ise_projects/schematic/CAlCULATOR.vf -w /home/ise/ise_projects/schematic/CAlCULATOR.sch
+//Design Name: CAlCULATOR
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MUX_2_1_BUS_MUSER_CAlCULATOR(A, 
+                                    B, 
+                                    E, 
+                                    S, 
+                                    Y);
+
+    input [7:0] A;
+    input [7:0] B;
+    input E;
+    input S;
+   output [7:0] Y;
+   
+   wire XLXN_5;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire XLXN_42;
+   wire XLXN_382;
+   wire XLXN_384;
+   wire XLXN_386;
+   
+   INV  XLXI_1 (.I(S), 
+               .O(XLXN_10));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_11), 
+               .O(Y[0]));
+   AND3  XLXI_6 (.I0(E), 
+                .I1(A[0]), 
+                .I2(XLXN_10), 
+                .O(XLXN_11));
+   AND3  XLXI_7 (.I0(E), 
+                .I1(B[0]), 
+                .I2(S), 
+                .O(XLXN_5));
+   INV  XLXI_8 (.I(S), 
+               .O(XLXN_18));
+   OR2  XLXI_9 (.I0(XLXN_16), 
+               .I1(XLXN_19), 
+               .O(Y[1]));
+   AND3  XLXI_10 (.I0(E), 
+                 .I1(A[1]), 
+                 .I2(XLXN_18), 
+                 .O(XLXN_19));
+   AND3  XLXI_11 (.I0(E), 
+                 .I1(B[1]), 
+                 .I2(S), 
+                 .O(XLXN_16));
+   INV  XLXI_12 (.I(S), 
+                .O(XLXN_24));
+   OR2  XLXI_13 (.I0(XLXN_23), 
+                .I1(XLXN_25), 
+                .O(Y[2]));
+   AND3  XLXI_14 (.I0(E), 
+                 .I1(A[2]), 
+                 .I2(XLXN_24), 
+                 .O(XLXN_25));
+   AND3  XLXI_15 (.I0(E), 
+                 .I1(B[2]), 
+                 .I2(S), 
+                 .O(XLXN_23));
+   INV  XLXI_16 (.I(S), 
+                .O(XLXN_27));
+   OR2  XLXI_17 (.I0(XLXN_26), 
+                .I1(XLXN_28), 
+                .O(Y[3]));
+   AND3  XLXI_18 (.I0(E), 
+                 .I1(A[3]), 
+                 .I2(XLXN_27), 
+                 .O(XLXN_28));
+   AND3  XLXI_19 (.I0(E), 
+                 .I1(B[3]), 
+                 .I2(S), 
+                 .O(XLXN_26));
+   INV  XLXI_20 (.I(S), 
+                .O(XLXN_33));
+   OR2  XLXI_21 (.I0(XLXN_32), 
+                .I1(XLXN_34), 
+                .O(Y[4]));
+   AND3  XLXI_22 (.I0(E), 
+                 .I1(A[4]), 
+                 .I2(XLXN_33), 
+                 .O(XLXN_34));
+   AND3  XLXI_23 (.I0(E), 
+                 .I1(B[4]), 
+                 .I2(S), 
+                 .O(XLXN_32));
+   INV  XLXI_24 (.I(S), 
+                .O(XLXN_36));
+   OR2  XLXI_25 (.I0(XLXN_35), 
+                .I1(XLXN_37), 
+                .O(Y[5]));
+   AND3  XLXI_26 (.I0(E), 
+                 .I1(A[5]), 
+                 .I2(XLXN_36), 
+                 .O(XLXN_37));
+   AND3  XLXI_27 (.I0(E), 
+                 .I1(B[5]), 
+                 .I2(S), 
+                 .O(XLXN_35));
+   INV  XLXI_28 (.I(S), 
+                .O(XLXN_41));
+   OR2  XLXI_29 (.I0(XLXN_40), 
+                .I1(XLXN_42), 
+                .O(Y[6]));
+   AND3  XLXI_30 (.I0(E), 
+                 .I1(A[6]), 
+                 .I2(XLXN_41), 
+                 .O(XLXN_42));
+   AND3  XLXI_31 (.I0(E), 
+                 .I1(B[6]), 
+                 .I2(S), 
+                 .O(XLXN_40));
+   INV  XLXI_152 (.I(S), 
+                 .O(XLXN_384));
+   OR2  XLXI_153 (.I0(XLXN_382), 
+                 .I1(XLXN_386), 
+                 .O(Y[7]));
+   AND3  XLXI_154 (.I0(E), 
+                  .I1(A[7]), 
+                  .I2(XLXN_384), 
+                  .O(XLXN_386));
+   AND3  XLXI_155 (.I0(E), 
+                  .I1(B[7]), 
+                  .I2(S), 
+                  .O(XLXN_382));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX_4_1_BUS_MUSER_CAlCULATOR(A, 
+                                    B, 
+                                    C, 
+                                    D, 
+                                    E, 
+                                    S0, 
+                                    S1, 
+                                    Y);
+
+    input [7:0] A;
+    input [7:0] B;
+    input [7:0] C;
+    input [7:0] D;
+    input E;
+    input S0;
+    input S1;
+   output [7:0] Y;
+   
+   wire [7:0] XLXN_13;
+   wire [7:0] XLXN_14;
+   
+   MUX_2_1_BUS_MUSER_CAlCULATOR  XLXI_4 (.A(A[7:0]), 
+                                        .B(B[7:0]), 
+                                        .E(E), 
+                                        .S(S1), 
+                                        .Y(XLXN_13[7:0]));
+   MUX_2_1_BUS_MUSER_CAlCULATOR  XLXI_5 (.A(C[7:0]), 
+                                        .B(D[7:0]), 
+                                        .E(E), 
+                                        .S(S1), 
+                                        .Y(XLXN_14[7:0]));
+   MUX_2_1_BUS_MUSER_CAlCULATOR  XLXI_6 (.A(XLXN_13[7:0]), 
+                                        .B(XLXN_14[7:0]), 
+                                        .E(E), 
+                                        .S(S0), 
+                                        .Y(Y[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX_8_BUS_MUSER_CAlCULATOR(A, 
+                                  B, 
+                                  E, 
+                                  S, 
+                                  Y);
+
+    input [7:0] A;
+    input [7:0] B;
+    input E;
+    input S;
+   output [7:0] Y;
+   
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_11;
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_20;
+   wire XLXN_26;
+   wire XLXN_28;
+   wire XLXN_30;
+   wire XLXN_36;
+   wire XLXN_38;
+   wire XLXN_40;
+   wire XLXN_46;
+   wire XLXN_48;
+   wire XLXN_50;
+   wire XLXN_56;
+   wire XLXN_58;
+   wire XLXN_60;
+   wire XLXN_66;
+   wire XLXN_68;
+   wire XLXN_70;
+   wire XLXN_382;
+   wire XLXN_384;
+   wire XLXN_386;
+   
+   INV  XLXI_1 (.I(S), 
+               .O(XLXN_7));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_11), 
+               .O(Y[0]));
+   AND3  XLXI_6 (.I0(E), 
+                .I1(A[0]), 
+                .I2(XLXN_7), 
+                .O(XLXN_11));
+   AND3  XLXI_7 (.I0(E), 
+                .I1(B[0]), 
+                .I2(S), 
+                .O(XLXN_5));
+   INV  XLXI_8 (.I(S), 
+               .O(XLXN_18));
+   OR2  XLXI_9 (.I0(XLXN_16), 
+               .I1(XLXN_20), 
+               .O(Y[1]));
+   AND3  XLXI_10 (.I0(E), 
+                 .I1(A[1]), 
+                 .I2(XLXN_18), 
+                 .O(XLXN_20));
+   AND3  XLXI_11 (.I0(E), 
+                 .I1(B[1]), 
+                 .I2(S), 
+                 .O(XLXN_16));
+   INV  XLXI_12 (.I(S), 
+                .O(XLXN_28));
+   OR2  XLXI_13 (.I0(XLXN_26), 
+                .I1(XLXN_30), 
+                .O(Y[2]));
+   AND3  XLXI_14 (.I0(E), 
+                 .I1(A[2]), 
+                 .I2(XLXN_28), 
+                 .O(XLXN_30));
+   AND3  XLXI_15 (.I0(E), 
+                 .I1(B[2]), 
+                 .I2(S), 
+                 .O(XLXN_26));
+   INV  XLXI_16 (.I(S), 
+                .O(XLXN_38));
+   OR2  XLXI_17 (.I0(XLXN_36), 
+                .I1(XLXN_40), 
+                .O(Y[3]));
+   AND3  XLXI_18 (.I0(E), 
+                 .I1(A[3]), 
+                 .I2(XLXN_38), 
+                 .O(XLXN_40));
+   AND3  XLXI_19 (.I0(E), 
+                 .I1(B[3]), 
+                 .I2(S), 
+                 .O(XLXN_36));
+   INV  XLXI_20 (.I(S), 
+                .O(XLXN_48));
+   OR2  XLXI_21 (.I0(XLXN_46), 
+                .I1(XLXN_50), 
+                .O(Y[4]));
+   AND3  XLXI_22 (.I0(E), 
+                 .I1(A[4]), 
+                 .I2(XLXN_48), 
+                 .O(XLXN_50));
+   AND3  XLXI_23 (.I0(E), 
+                 .I1(B[4]), 
+                 .I2(S), 
+                 .O(XLXN_46));
+   INV  XLXI_24 (.I(S), 
+                .O(XLXN_58));
+   OR2  XLXI_25 (.I0(XLXN_56), 
+                .I1(XLXN_60), 
+                .O(Y[5]));
+   AND3  XLXI_26 (.I0(E), 
+                 .I1(A[5]), 
+                 .I2(XLXN_58), 
+                 .O(XLXN_60));
+   AND3  XLXI_27 (.I0(E), 
+                 .I1(B[5]), 
+                 .I2(S), 
+                 .O(XLXN_56));
+   INV  XLXI_28 (.I(S), 
+                .O(XLXN_68));
+   OR2  XLXI_29 (.I0(XLXN_66), 
+                .I1(XLXN_70), 
+                .O(Y[6]));
+   AND3  XLXI_30 (.I0(E), 
+                 .I1(A[6]), 
+                 .I2(XLXN_68), 
+                 .O(XLXN_70));
+   AND3  XLXI_31 (.I0(E), 
+                 .I1(B[6]), 
+                 .I2(S), 
+                 .O(XLXN_66));
+   INV  XLXI_152 (.I(S), 
+                 .O(XLXN_384));
+   OR2  XLXI_153 (.I0(XLXN_382), 
+                 .I1(XLXN_386), 
+                 .O(Y[7]));
+   AND3  XLXI_154 (.I0(E), 
+                  .I1(A[7]), 
+                  .I2(XLXN_384), 
+                  .O(XLXN_386));
+   AND3  XLXI_155 (.I0(E), 
+                  .I1(B[7]), 
+                  .I2(S), 
+                  .O(XLXN_382));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX_2_1_MUSER_CAlCULATOR(E, 
+                                I1, 
+                                I2, 
+                                S, 
+                                Y);
+
+    input E;
+    input I1;
+    input I2;
+    input S;
+   output Y;
+   
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_11;
+   
+   INV  XLXI_1 (.I(S), 
+               .O(XLXN_7));
+   OR2  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_11), 
+               .O(Y));
+   AND3  XLXI_6 (.I0(E), 
+                .I1(I1), 
+                .I2(XLXN_7), 
+                .O(XLXN_11));
+   AND3  XLXI_7 (.I0(E), 
+                .I1(I2), 
+                .I2(S), 
+                .O(XLXN_5));
+endmodule
+`timescale 1ns / 1ps
+
+module HA_Clear_MUSER_CAlCULATOR(A, 
+                                 B, 
+                                 CLR, 
+                                 COUT, 
+                                 SUM);
+
+    input A;
+    input B;
+    input CLR;
+   output COUT;
+   output SUM;
+   
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_17;
+   wire XLXN_20;
+   
+   XOR2  XLXI_8 (.I0(XLXN_11), 
+                .I1(XLXN_10), 
+                .O(XLXN_17));
+   AND2  XLXI_9 (.I0(CLR), 
+                .I1(A), 
+                .O(XLXN_10));
+   AND2  XLXI_10 (.I0(B), 
+                 .I1(CLR), 
+                 .O(XLXN_11));
+   AND2  XLXI_11 (.I0(XLXN_11), 
+                 .I1(XLXN_10), 
+                 .O(XLXN_20));
+   AND2  XLXI_12 (.I0(CLR), 
+                 .I1(XLXN_17), 
+                 .O(SUM));
+   AND2  XLXI_13 (.I0(XLXN_20), 
+                 .I1(CLR), 
+                 .O(COUT));
+endmodule
+`timescale 1ns / 1ps
+
+module FA_Clear_MUSER_CAlCULATOR(A, 
+                                 B, 
+                                 Cin, 
+                                 CLR, 
+                                 Cout, 
+                                 Sum);
+
+    input A;
+    input B;
+    input Cin;
+    input CLR;
+   output Cout;
+   output Sum;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_9;
+   wire XLXN_14;
+   
+   HA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(XLXN_1), 
+                                     .B(XLXN_2), 
+                                     .CLR(CLR), 
+                                     .COUT(XLXN_6), 
+                                     .SUM(XLXN_4));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(XLXN_4), 
+                                     .B(XLXN_3), 
+                                     .CLR(CLR), 
+                                     .COUT(XLXN_5), 
+                                     .SUM(XLXN_14));
+   AND2  XLXI_3 (.I0(CLR), 
+                .I1(A), 
+                .O(XLXN_1));
+   AND2  XLXI_4 (.I0(B), 
+                .I1(CLR), 
+                .O(XLXN_2));
+   AND2  XLXI_5 (.I0(Cin), 
+                .I1(CLR), 
+                .O(XLXN_3));
+   AND2  XLXI_6 (.I0(CLR), 
+                .I1(XLXN_14), 
+                .O(Sum));
+   AND2  XLXI_7 (.I0(XLXN_9), 
+                .I1(CLR), 
+                .O(Cout));
+   OR2  XLXI_8 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(XLXN_9));
+endmodule
+`timescale 1ns / 1ps
+
+module UNSIGNED_DIVIDER_MUSER_CAlCULATOR(A_IN, 
+                                         B_IN, 
+                                         clr, 
+                                         Q, 
+                                         R);
+
+    input [7:0] A_IN;
+    input [7:0] B_IN;
+    input clr;
+   output [7:0] Q;
+   output [7:0] R;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_38;
+   wire XLXN_40;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_53;
+   wire XLXN_55;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_61;
+   wire XLXN_101;
+   wire XLXN_103;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire XLXN_109;
+   wire XLXN_114;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_129;
+   wire XLXN_132;
+   wire XLXN_136;
+   wire XLXN_138;
+   wire XLXN_147;
+   wire XLXN_158;
+   wire XLXN_159;
+   wire XLXN_162;
+   wire XLXN_165;
+   wire XLXN_170;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   HA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(XLXN_11), 
+                                     .B(XLXN_3), 
+                                     .CLR(clr), 
+                                     .COUT(), 
+                                     .SUM(XLXN_129));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(XLXN_12), 
+                                     .B(XLXN_4), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_11), 
+                                     .SUM(XLXN_16));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_3 (.A(XLXN_13), 
+                                     .B(XLXN_5), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_12), 
+                                     .SUM(XLXN_33));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_4 (.A(XLXN_14), 
+                                     .B(XLXN_6), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_13), 
+                                     .SUM(XLXN_132));
+   INV  XLXI_5 (.I(B_IN[0]), 
+               .O(XLXN_6));
+   INV  XLXI_6 (.I(B_IN[1]), 
+               .O(XLXN_5));
+   INV  XLXI_7 (.I(B_IN[2]), 
+               .O(XLXN_4));
+   INV  XLXI_8 (.I(B_IN[3]), 
+               .O(XLXN_3));
+   VCC  XLXI_9 (.P(XLXN_14));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_10 (.A(XLXN_53), 
+                                      .B(XLXN_129), 
+                                      .Cin(XLXN_17), 
+                                      .CLR(clr), 
+                                      .Cout(Q_DUMMY[3]), 
+                                      .Sum());
+   FA_Clear_MUSER_CAlCULATOR  XLXI_11 (.A(XLXN_53), 
+                                      .B(XLXN_16), 
+                                      .Cin(XLXN_18), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_17), 
+                                      .Sum(XLXN_29));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_12 (.A(XLXN_53), 
+                                      .B(XLXN_33), 
+                                      .Cin(XLXN_19), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_18), 
+                                      .Sum(XLXN_30));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_13 (.A(A_IN[3]), 
+                                      .B(XLXN_132), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_19), 
+                                      .SUM(XLXN_31));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_14 (.E(clr), 
+                                     .I1(XLXN_53), 
+                                     .I2(XLXN_29), 
+                                     .S(Q_DUMMY[3]), 
+                                     .Y(XLXN_38));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_15 (.E(clr), 
+                                     .I1(XLXN_53), 
+                                     .I2(XLXN_30), 
+                                     .S(Q_DUMMY[3]), 
+                                     .Y(XLXN_40));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_16 (.E(clr), 
+                                     .I1(A_IN[3]), 
+                                     .I2(XLXN_31), 
+                                     .S(Q_DUMMY[3]), 
+                                     .Y(XLXN_42));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_17 (.A(XLXN_38), 
+                                      .B(XLXN_129), 
+                                      .Cin(XLXN_34), 
+                                      .CLR(clr), 
+                                      .Cout(Q_DUMMY[2]), 
+                                      .Sum());
+   FA_Clear_MUSER_CAlCULATOR  XLXI_18 (.A(XLXN_40), 
+                                      .B(XLXN_16), 
+                                      .Cin(XLXN_35), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_34), 
+                                      .Sum(XLXN_59));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_19 (.A(XLXN_42), 
+                                      .B(XLXN_33), 
+                                      .Cin(XLXN_36), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_35), 
+                                      .Sum(XLXN_136));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_20 (.E(clr), 
+                                     .I1(XLXN_40), 
+                                     .I2(XLXN_59), 
+                                     .S(Q_DUMMY[2]), 
+                                     .Y(XLXN_48));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_21 (.E(clr), 
+                                     .I1(XLXN_42), 
+                                     .I2(XLXN_136), 
+                                     .S(Q_DUMMY[2]), 
+                                     .Y(XLXN_47));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_22 (.E(clr), 
+                                     .I1(A_IN[2]), 
+                                     .I2(XLXN_61), 
+                                     .S(Q_DUMMY[2]), 
+                                     .Y(XLXN_55));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_23 (.A(A_IN[2]), 
+                                      .B(XLXN_132), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_36), 
+                                      .SUM(XLXN_61));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_24 (.A(XLXN_48), 
+                                      .B(XLXN_129), 
+                                      .Cin(XLXN_43), 
+                                      .CLR(clr), 
+                                      .Cout(Q_DUMMY[1]), 
+                                      .Sum());
+   FA_Clear_MUSER_CAlCULATOR  XLXI_25 (.A(XLXN_47), 
+                                      .B(XLXN_16), 
+                                      .Cin(XLXN_44), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_43), 
+                                      .Sum(XLXN_57));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_26 (.A(XLXN_55), 
+                                      .B(XLXN_33), 
+                                      .Cin(XLXN_45), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_44), 
+                                      .Sum(XLXN_58));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_27 (.E(clr), 
+                                     .I1(XLXN_55), 
+                                     .I2(XLXN_58), 
+                                     .S(Q_DUMMY[1]), 
+                                     .Y(XLXN_147));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_28 (.E(clr), 
+                                     .I1(A_IN[1]), 
+                                     .I2(XLXN_158), 
+                                     .S(Q_DUMMY[1]), 
+                                     .Y(XLXN_114));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_29 (.A(A_IN[1]), 
+                                      .B(XLXN_132), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_45), 
+                                      .SUM(XLXN_158));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_30 (.E(clr), 
+                                     .I1(XLXN_47), 
+                                     .I2(XLXN_57), 
+                                     .S(Q_DUMMY[1]), 
+                                     .Y(XLXN_120));
+   GND  XLXI_56 (.G(XLXN_53));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_57 (.A(XLXN_120), 
+                                      .B(XLXN_129), 
+                                      .Cin(XLXN_101), 
+                                      .CLR(clr), 
+                                      .Cout(Q_DUMMY[0]), 
+                                      .Sum(XLXN_121));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_58 (.A(XLXN_147), 
+                                      .B(XLXN_16), 
+                                      .Cin(XLXN_138), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_101), 
+                                      .Sum(XLXN_107));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_59 (.A(XLXN_114), 
+                                      .B(XLXN_33), 
+                                      .Cin(XLXN_103), 
+                                      .CLR(clr), 
+                                      .Cout(XLXN_138), 
+                                      .Sum(XLXN_108));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_60 (.A(A_IN[0]), 
+                                      .B(XLXN_132), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_103), 
+                                      .SUM(XLXN_109));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_69 (.E(clr), 
+                                     .I1(XLXN_147), 
+                                     .I2(XLXN_107), 
+                                     .S(Q_DUMMY[0]), 
+                                     .Y(R[2]));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_70 (.E(clr), 
+                                     .I1(XLXN_114), 
+                                     .I2(XLXN_108), 
+                                     .S(Q_DUMMY[0]), 
+                                     .Y(R[1]));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_71 (.E(clr), 
+                                     .I1(A_IN[0]), 
+                                     .I2(XLXN_109), 
+                                     .S(Q_DUMMY[0]), 
+                                     .Y(R[0]));
+   MUX_2_1_MUSER_CAlCULATOR  XLXI_76 (.E(clr), 
+                                     .I1(XLXN_120), 
+                                     .I2(XLXN_121), 
+                                     .S(Q_DUMMY[0]), 
+                                     .Y(R[3]));
+   AND2  XLXI_77 (.I0(XLXN_159), 
+                 .I1(XLXN_162), 
+                 .O(R[4]));
+   AND2  XLXI_78 (.I0(XLXN_159), 
+                 .I1(XLXN_162), 
+                 .O(R[5]));
+   AND2  XLXI_79 (.I0(XLXN_159), 
+                 .I1(XLXN_162), 
+                 .O(R[6]));
+   AND2  XLXI_80 (.I0(XLXN_159), 
+                 .I1(XLXN_162), 
+                 .O(R[7]));
+   GND  XLXI_81 (.G(XLXN_159));
+   VCC  XLXI_82 (.P(XLXN_162));
+   AND2  XLXI_83 (.I0(XLXN_165), 
+                 .I1(XLXN_170), 
+                 .O(Q_DUMMY[4]));
+   AND2  XLXI_84 (.I0(XLXN_165), 
+                 .I1(XLXN_170), 
+                 .O(Q_DUMMY[5]));
+   AND2  XLXI_85 (.I0(XLXN_165), 
+                 .I1(XLXN_170), 
+                 .O(Q_DUMMY[6]));
+   AND2  XLXI_86 (.I0(XLXN_165), 
+                 .I1(XLXN_170), 
+                 .O(Q_DUMMY[7]));
+   GND  XLXI_87 (.G(XLXN_165));
+   VCC  XLXI_88 (.P(XLXN_170));
+endmodule
+`timescale 1ns / 1ps
+
+module ADDER_with_BUS_MUSER_CAlCULATOR(A_IN, 
+                                       B_IN, 
+                                       Clear_in, 
+                                       Cout, 
+                                       TOTAL);
+
+    input [7:0] A_IN;
+    input [7:0] B_IN;
+    input Clear_in;
+   output Cout;
+   output [7:0] TOTAL;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_312;
+   wire XLXN_313;
+   wire XLXN_314;
+   wire XLXN_315;
+   wire XLXN_316;
+   wire XLXN_317;
+   wire XLXN_318;
+   wire XLXN_326;
+   wire XLXN_327;
+   wire XLXN_330;
+   wire XLXN_331;
+   wire XLXN_332;
+   wire XLXN_333;
+   wire XLXN_334;
+   wire XLXN_335;
+   wire XLXN_336;
+   wire XLXN_355;
+   
+   FA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(XLXN_6), 
+                                     .B(XLXN_5), 
+                                     .Cin(XLXN_313), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_312), 
+                                     .Sum(XLXN_330));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(XLXN_8), 
+                                     .B(XLXN_7), 
+                                     .Cin(XLXN_314), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_313), 
+                                     .Sum(XLXN_331));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_3 (.A(XLXN_10), 
+                                     .B(XLXN_9), 
+                                     .Cin(XLXN_315), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_314), 
+                                     .Sum(XLXN_332));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_4 (.A(XLXN_12), 
+                                     .B(XLXN_11), 
+                                     .Cin(XLXN_316), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_315), 
+                                     .Sum(XLXN_333));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_5 (.A(XLXN_14), 
+                                     .B(XLXN_13), 
+                                     .Cin(XLXN_317), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_316), 
+                                     .Sum(XLXN_334));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_6 (.A(XLXN_16), 
+                                     .B(XLXN_15), 
+                                     .Cin(XLXN_318), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_317), 
+                                     .Sum(XLXN_335));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_7 (.A(XLXN_18), 
+                                     .B(XLXN_17), 
+                                     .Cin(XLXN_355), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_318), 
+                                     .Sum(XLXN_336));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_8 (.A(XLXN_4), 
+                                     .B(XLXN_3), 
+                                     .Cin(XLXN_312), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_327), 
+                                     .Sum(XLXN_326));
+   AND2  XLXI_9 (.I0(B_IN[7]), 
+                .I1(Clear_in), 
+                .O(XLXN_3));
+   AND2  XLXI_10 (.I0(Clear_in), 
+                 .I1(A_IN[7]), 
+                 .O(XLXN_4));
+   AND2  XLXI_11 (.I0(B_IN[6]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_5));
+   AND2  XLXI_12 (.I0(Clear_in), 
+                 .I1(A_IN[6]), 
+                 .O(XLXN_6));
+   AND2  XLXI_13 (.I0(B_IN[5]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_7));
+   AND2  XLXI_14 (.I0(Clear_in), 
+                 .I1(A_IN[5]), 
+                 .O(XLXN_8));
+   AND2  XLXI_15 (.I0(B_IN[4]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_9));
+   AND2  XLXI_16 (.I0(Clear_in), 
+                 .I1(A_IN[4]), 
+                 .O(XLXN_10));
+   AND2  XLXI_17 (.I0(B_IN[3]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_11));
+   AND2  XLXI_18 (.I0(Clear_in), 
+                 .I1(A_IN[3]), 
+                 .O(XLXN_12));
+   AND2  XLXI_19 (.I0(B_IN[2]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_13));
+   AND2  XLXI_20 (.I0(Clear_in), 
+                 .I1(A_IN[2]), 
+                 .O(XLXN_14));
+   AND2  XLXI_21 (.I0(B_IN[1]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_15));
+   AND2  XLXI_22 (.I0(Clear_in), 
+                 .I1(A_IN[1]), 
+                 .O(XLXN_16));
+   AND2  XLXI_23 (.I0(B_IN[0]), 
+                 .I1(Clear_in), 
+                 .O(XLXN_17));
+   AND2  XLXI_24 (.I0(Clear_in), 
+                 .I1(A_IN[0]), 
+                 .O(XLXN_18));
+   AND2  XLXI_124 (.I0(XLXN_326), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[7]));
+   AND2  XLXI_125 (.I0(XLXN_327), 
+                  .I1(Clear_in), 
+                  .O(Cout));
+   AND2  XLXI_130 (.I0(XLXN_330), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[6]));
+   AND2  XLXI_131 (.I0(XLXN_331), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[5]));
+   AND2  XLXI_132 (.I0(XLXN_332), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[4]));
+   AND2  XLXI_133 (.I0(XLXN_333), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[3]));
+   AND2  XLXI_134 (.I0(XLXN_334), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[2]));
+   AND2  XLXI_135 (.I0(XLXN_335), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[1]));
+   AND2  XLXI_136 (.I0(XLXN_336), 
+                  .I1(Clear_in), 
+                  .O(TOTAL[0]));
+   GND  XLXI_137 (.G(XLXN_355));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPLIMENT_8_BIT_MUSER_CAlCULATOR(A, 
+                                         clr, 
+                                         S);
+
+    input [7:0] A;
+    input clr;
+   output [7:0] S;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_9;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_46;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_71;
+   wire XLXN_72;
+   wire XLXN_85;
+   wire XLXN_86;
+   wire XLXN_87;
+   wire XLXN_88;
+   
+   HA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(XLXN_4), 
+                                     .B(XLXN_85), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_72), 
+                                     .SUM(S[3]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(XLXN_3), 
+                                     .B(XLXN_86), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_4), 
+                                     .SUM(S[2]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_3 (.A(XLXN_2), 
+                                     .B(XLXN_87), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_3), 
+                                     .SUM(S[1]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_4 (.A(XLXN_9), 
+                                     .B(XLXN_88), 
+                                     .CLR(clr), 
+                                     .COUT(XLXN_2), 
+                                     .SUM(S[0]));
+   VCC  XLXI_5 (.P(XLXN_9));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_21 (.A(XLXN_59), 
+                                      .B(XLXN_45), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_44), 
+                                      .SUM(S[6]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_23 (.A(XLXN_60), 
+                                      .B(XLXN_46), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_45), 
+                                      .SUM(S[5]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_29 (.A(XLXN_58), 
+                                      .B(XLXN_44), 
+                                      .CLR(clr), 
+                                      .COUT(), 
+                                      .SUM(S[7]));
+   INV  XLXI_42 (.I(XLXN_71), 
+                .O(XLXN_57));
+   INV  XLXI_43 (.I(XLXN_71), 
+                .O(XLXN_58));
+   INV  XLXI_44 (.I(XLXN_71), 
+                .O(XLXN_59));
+   INV  XLXI_45 (.I(XLXN_71), 
+                .O(XLXN_60));
+   GND  XLXI_46 (.G(XLXN_71));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_47 (.A(XLXN_57), 
+                                      .B(XLXN_72), 
+                                      .CLR(clr), 
+                                      .COUT(XLXN_46), 
+                                      .SUM(S[4]));
+   INV  XLXI_48 (.I(A[3]), 
+                .O(XLXN_85));
+   INV  XLXI_49 (.I(A[2]), 
+                .O(XLXN_86));
+   INV  XLXI_50 (.I(A[1]), 
+                .O(XLXN_87));
+   INV  XLXI_51 (.I(A[0]), 
+                .O(XLXN_88));
+endmodule
+`timescale 1ns / 1ps
+
+module SD_MUSER_CAlCULATOR(CLR, 
+                           Q, 
+                           Q1);
+
+    input CLR;
+    input [7:0] Q;
+   output [7:0] Q1;
+   
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_51;
+   wire XLXN_52;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_56;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   
+   HA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(Q[3]), 
+                                     .B(XLXN_6), 
+                                     .CLR(CLR), 
+                                     .COUT(), 
+                                     .SUM(XLXN_70));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(Q[2]), 
+                                     .B(XLXN_7), 
+                                     .CLR(CLR), 
+                                     .COUT(XLXN_6), 
+                                     .SUM(XLXN_69));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_3 (.A(Q[1]), 
+                                     .B(XLXN_8), 
+                                     .CLR(CLR), 
+                                     .COUT(XLXN_7), 
+                                     .SUM(XLXN_68));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_4 (.A(Q[0]), 
+                                     .B(XLXN_10), 
+                                     .CLR(CLR), 
+                                     .COUT(XLXN_8), 
+                                     .SUM(XLXN_67));
+   VCC  XLXI_6 (.P(XLXN_10));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_22 (.A(XLXN_53), 
+                                      .B(XLXN_51), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_52), 
+                                      .SUM(Q1[0]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_23 (.A(XLXN_54), 
+                                      .B(XLXN_52), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_49), 
+                                      .SUM(Q1[1]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_24 (.A(XLXN_56), 
+                                      .B(XLXN_49), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_48), 
+                                      .SUM(Q1[2]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_25 (.A(XLXN_55), 
+                                      .B(XLXN_48), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_47), 
+                                      .SUM(Q1[3]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_26 (.A(XLXN_57), 
+                                      .B(XLXN_47), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_46), 
+                                      .SUM(Q1[4]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_27 (.A(XLXN_60), 
+                                      .B(XLXN_46), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_45), 
+                                      .SUM(Q1[5]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_28 (.A(XLXN_59), 
+                                      .B(XLXN_45), 
+                                      .CLR(CLR), 
+                                      .COUT(XLXN_44), 
+                                      .SUM(Q1[6]));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_29 (.A(XLXN_58), 
+                                      .B(XLXN_44), 
+                                      .CLR(CLR), 
+                                      .COUT(), 
+                                      .SUM(Q1[7]));
+   VCC  XLXI_37 (.P(XLXN_51));
+   INV  XLXI_38 (.I(XLXN_67), 
+                .O(XLXN_53));
+   INV  XLXI_39 (.I(XLXN_68), 
+                .O(XLXN_54));
+   INV  XLXI_40 (.I(XLXN_70), 
+                .O(XLXN_55));
+   INV  XLXI_41 (.I(XLXN_69), 
+                .O(XLXN_56));
+   INV  XLXI_42 (.I(XLXN_71), 
+                .O(XLXN_57));
+   INV  XLXI_43 (.I(XLXN_71), 
+                .O(XLXN_58));
+   INV  XLXI_44 (.I(XLXN_71), 
+                .O(XLXN_59));
+   INV  XLXI_45 (.I(XLXN_71), 
+                .O(XLXN_60));
+   GND  XLXI_46 (.G(XLXN_71));
+endmodule
+`timescale 1ns / 1ps
+
+module Signed_Divider_MUSER_CAlCULATOR(A, 
+                                       B, 
+                                       CLR, 
+                                       Q1, 
+                                       R);
+
+    input [7:0] A;
+    input [7:0] B;
+    input CLR;
+   output [7:0] Q1;
+   output [7:0] R;
+   
+   wire [7:0] XLXN_3;
+   wire [7:0] XLXN_4;
+   wire [7:0] XLXN_7;
+   
+   SD_MUSER_CAlCULATOR  XLXI_5 (.CLR(CLR), 
+                               .Q(XLXN_7[7:0]), 
+                               .Q1(Q1[7:0]));
+   COMPLIMENT_8_BIT_MUSER_CAlCULATOR  XLXI_6 (.A(XLXN_4[7:0]), 
+                                             .clr(CLR), 
+                                             .S(XLXN_3[7:0]));
+   ADDER_with_BUS_MUSER_CAlCULATOR  XLXI_7 (.A_IN(B[7:0]), 
+                                           .B_IN(XLXN_3[7:0]), 
+                                           .Clear_in(CLR), 
+                                           .Cout(), 
+                                           .TOTAL(R[7:0]));
+   UNSIGNED_DIVIDER_MUSER_CAlCULATOR  XLXI_11 (.A_IN(A[7:0]), 
+                                              .B_IN(B[7:0]), 
+                                              .clr(CLR), 
+                                              .Q(XLXN_7[7:0]), 
+                                              .R(XLXN_4[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module DIV_MUSER_CAlCULATOR(A, 
+                            B, 
+                            E, 
+                            S0, 
+                            S1, 
+                            Q, 
+                            R);
+
+    input [7:0] A;
+    input [7:0] B;
+    input E;
+    input S0;
+    input S1;
+   output [7:0] Q;
+   output [7:0] R;
+   
+   wire [7:0] XLXN_1;
+   wire [7:0] XLXN_2;
+   wire [7:0] XLXN_3;
+   wire [7:0] XLXN_4;
+   wire XLXN_11;
+   
+   Signed_Divider_MUSER_CAlCULATOR  XLXI_1 (.A(A[7:0]), 
+                                           .B(B[7:0]), 
+                                           .CLR(E), 
+                                           .Q1(XLXN_3[7:0]), 
+                                           .R(XLXN_1[7:0]));
+   UNSIGNED_DIVIDER_MUSER_CAlCULATOR  XLXI_2 (.A_IN(A[7:0]), 
+                                             .B_IN(B[7:0]), 
+                                             .clr(E), 
+                                             .Q(XLXN_4[7:0]), 
+                                             .R(XLXN_2[7:0]));
+   MUX_8_BUS_MUSER_CAlCULATOR  XLXI_4 (.A(XLXN_4[7:0]), 
+                                      .B(XLXN_3[7:0]), 
+                                      .E(E), 
+                                      .S(XLXN_11), 
+                                      .Y(Q[7:0]));
+   MUX_8_BUS_MUSER_CAlCULATOR  XLXI_5 (.A(XLXN_2[7:0]), 
+                                      .B(XLXN_1[7:0]), 
+                                      .E(E), 
+                                      .S(XLXN_11), 
+                                      .Y(R[7:0]));
+   XOR2  XLXI_6 (.I0(S1), 
+                .I1(S0), 
+                .O(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module MULTIPLIER_MUSER_CAlCULATOR(A_IN, 
+                                   B_IN, 
+                                   Clear_IN, 
+                                   M);
+
+    input [7:0] A_IN;
+    input [7:0] B_IN;
+    input Clear_IN;
+   output [7:0] M;
+   
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_30;
+   wire XLXN_32;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_91;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_104;
+   wire XLXN_105;
+   wire XLXN_106;
+   wire XLXN_109;
+   wire XLXN_110;
+   wire XLXN_111;
+   wire XLXN_112;
+   wire XLXN_113;
+   wire XLXN_114;
+   wire XLXN_116;
+   wire XLXN_118;
+   wire XLXN_119;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_126;
+   wire XLXN_143;
+   wire XLXN_144;
+   wire XLXN_145;
+   wire XLXN_146;
+   wire XLXN_147;
+   wire XLXN_148;
+   wire XLXN_149;
+   wire XLXN_151;
+   wire XLXN_152;
+   wire XLXN_153;
+   wire XLXN_154;
+   wire XLXN_155;
+   wire XLXN_158;
+   wire XLXN_159;
+   wire XLXN_163;
+   wire XLXN_164;
+   wire XLXN_166;
+   wire XLXN_168;
+   wire XLXN_169;
+   wire XLXN_170;
+   wire XLXN_172;
+   wire XLXN_174;
+   wire XLXN_175;
+   wire XLXN_176;
+   wire XLXN_178;
+   wire XLXN_179;
+   wire XLXN_180;
+   wire XLXN_181;
+   wire XLXN_182;
+   wire XLXN_183;
+   wire XLXN_184;
+   wire XLXN_185;
+   wire XLXN_192;
+   wire XLXN_193;
+   wire XLXN_194;
+   wire XLXN_195;
+   wire XLXN_197;
+   wire XLXN_198;
+   wire XLXN_199;
+   wire XLXN_200;
+   wire XLXN_201;
+   wire XLXN_202;
+   wire XLXN_203;
+   wire XLXN_204;
+   wire XLXN_205;
+   wire XLXN_206;
+   wire XLXN_207;
+   wire XLXN_208;
+   wire XLXN_209;
+   wire XLXN_210;
+   wire XLXN_211;
+   wire XLXN_212;
+   wire XLXN_213;
+   wire XLXN_214;
+   wire XLXN_217;
+   wire XLXN_218;
+   wire XLXN_219;
+   wire XLXN_220;
+   wire XLXN_221;
+   wire XLXN_222;
+   wire XLXN_264;
+   wire XLXN_265;
+   wire XLXN_266;
+   wire XLXN_267;
+   wire XLXN_269;
+   wire XLXN_270;
+   wire XLXN_271;
+   wire XLXN_273;
+   
+   AND2  XLXI_1 (.I0(XLXN_195), 
+                .I1(XLXN_222), 
+                .O(XLXN_264));
+   AND2  XLXI_8 (.I0(XLXN_195), 
+                .I1(XLXN_155), 
+                .O(XLXN_39));
+   AND2  XLXI_9 (.I0(XLXN_197), 
+                .I1(XLXN_222), 
+                .O(XLXN_38));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_18 (.A(XLXN_26), 
+                                      .B(XLXN_27), 
+                                      .Cin(XLXN_91), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_37), 
+                                      .Sum(XLXN_30));
+   AND2  XLXI_19 (.I0(XLXN_195), 
+                 .I1(XLXN_154), 
+                 .O(XLXN_26));
+   AND2  XLXI_20 (.I0(XLXN_197), 
+                 .I1(XLXN_155), 
+                 .O(XLXN_27));
+   AND2  XLXI_22 (.I0(XLXN_172), 
+                 .I1(XLXN_222), 
+                 .O(XLXN_32));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_23 (.A(XLXN_35), 
+                                      .B(XLXN_34), 
+                                      .Cin(XLXN_37), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_104), 
+                                      .Sum(XLXN_93));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_25 (.A(XLXN_30), 
+                                      .B(XLXN_32), 
+                                      .CLR(Clear_IN), 
+                                      .COUT(XLXN_94), 
+                                      .SUM(XLXN_266));
+   AND2  XLXI_26 (.I0(XLXN_197), 
+                 .I1(XLXN_154), 
+                 .O(XLXN_34));
+   AND2  XLXI_27 (.I0(XLXN_195), 
+                 .I1(XLXN_92), 
+                 .O(XLXN_35));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_28 (.A(XLXN_39), 
+                                      .B(XLXN_38), 
+                                      .CLR(Clear_IN), 
+                                      .COUT(XLXN_91), 
+                                      .SUM(XLXN_265));
+   AND2  XLXI_29 (.I0(A_IN[0]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_222));
+   AND2  XLXI_30 (.I0(A_IN[1]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_155));
+   AND2  XLXI_31 (.I0(A_IN[2]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_154));
+   AND2  XLXI_32 (.I0(A_IN[3]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_92));
+   AND2  XLXI_33 (.I0(A_IN[4]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_121));
+   AND2  XLXI_35 (.I0(A_IN[5]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_120));
+   AND2  XLXI_37 (.I0(B_IN[0]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_195));
+   AND2  XLXI_38 (.I0(B_IN[1]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_197));
+   AND2  XLXI_39 (.I0(B_IN[2]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_172));
+   AND2  XLXI_40 (.I0(B_IN[3]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_204));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_67 (.A(XLXN_93), 
+                                      .B(XLXN_95), 
+                                      .Cin(XLXN_94), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_109), 
+                                      .Sum(XLXN_96));
+   AND2  XLXI_68 (.I0(XLXN_172), 
+                 .I1(XLXN_155), 
+                 .O(XLXN_95));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_69 (.A(XLXN_96), 
+                                      .B(XLXN_97), 
+                                      .CLR(Clear_IN), 
+                                      .COUT(XLXN_111), 
+                                      .SUM(XLXN_267));
+   AND2  XLXI_70 (.I0(XLXN_204), 
+                 .I1(XLXN_222), 
+                 .O(XLXN_97));
+   AND2  XLXI_71 (.I0(B_IN[4]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_116));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_72 (.A(XLXN_101), 
+                                      .B(XLXN_102), 
+                                      .Cin(XLXN_104), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_126), 
+                                      .Sum(XLXN_105));
+   AND2  XLXI_73 (.I0(XLXN_195), 
+                 .I1(XLXN_121), 
+                 .O(XLXN_101));
+   AND2  XLXI_74 (.I0(XLXN_197), 
+                 .I1(XLXN_92), 
+                 .O(XLXN_102));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_75 (.A(XLXN_105), 
+                                      .B(XLXN_106), 
+                                      .Cin(XLXN_109), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_153), 
+                                      .Sum(XLXN_110));
+   AND2  XLXI_76 (.I0(XLXN_172), 
+                 .I1(XLXN_154), 
+                 .O(XLXN_106));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_77 (.A(XLXN_110), 
+                                      .B(XLXN_112), 
+                                      .Cin(XLXN_111), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_151), 
+                                      .Sum(XLXN_113));
+   AND2  XLXI_78 (.I0(XLXN_204), 
+                 .I1(XLXN_155), 
+                 .O(XLXN_112));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_79 (.A(XLXN_113), 
+                                      .B(XLXN_114), 
+                                      .CLR(Clear_IN), 
+                                      .COUT(XLXN_152), 
+                                      .SUM(XLXN_269));
+   AND2  XLXI_80 (.I0(XLXN_116), 
+                 .I1(XLXN_222), 
+                 .O(XLXN_114));
+   AND2  XLXI_81 (.I0(B_IN[5]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_158));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_82 (.A(XLXN_118), 
+                                      .B(XLXN_119), 
+                                      .Cin(XLXN_126), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_166), 
+                                      .Sum(XLXN_143));
+   AND2  XLXI_83 (.I0(XLXN_195), 
+                 .I1(XLXN_120), 
+                 .O(XLXN_118));
+   AND2  XLXI_84 (.I0(XLXN_197), 
+                 .I1(XLXN_121), 
+                 .O(XLXN_119));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_85 (.A(XLXN_143), 
+                                      .B(XLXN_144), 
+                                      .Cin(XLXN_153), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_169), 
+                                      .Sum(XLXN_145));
+   AND2  XLXI_86 (.I0(XLXN_172), 
+                 .I1(XLXN_92), 
+                 .O(XLXN_144));
+   AND2  XLXI_87 (.I0(XLXN_204), 
+                 .I1(XLXN_154), 
+                 .O(XLXN_146));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_88 (.A(XLXN_145), 
+                                      .B(XLXN_146), 
+                                      .Cin(XLXN_151), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_176), 
+                                      .Sum(XLXN_147));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_89 (.A(XLXN_147), 
+                                      .B(XLXN_148), 
+                                      .Cin(XLXN_152), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_180), 
+                                      .Sum(XLXN_149));
+   AND2  XLXI_90 (.I0(XLXN_116), 
+                 .I1(XLXN_155), 
+                 .O(XLXN_148));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_91 (.A(XLXN_149), 
+                                      .B(XLXN_159), 
+                                      .CLR(Clear_IN), 
+                                      .COUT(XLXN_183), 
+                                      .SUM(XLXN_270));
+   AND2  XLXI_93 (.I0(XLXN_158), 
+                 .I1(XLXN_222), 
+                 .O(XLXN_159));
+   AND2  XLXI_94 (.I0(A_IN[6]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_198));
+   AND2  XLXI_95 (.I0(B_IN[6]), 
+                 .I1(Clear_IN), 
+                 .O(XLXN_217));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_96 (.A(XLXN_163), 
+                                      .B(XLXN_164), 
+                                      .Cin(XLXN_166), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_199), 
+                                      .Sum(XLXN_168));
+   AND2  XLXI_97 (.I0(XLXN_195), 
+                 .I1(XLXN_198), 
+                 .O(XLXN_163));
+   AND2  XLXI_98 (.I0(XLXN_197), 
+                 .I1(XLXN_120), 
+                 .O(XLXN_164));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_99 (.A(XLXN_168), 
+                                      .B(XLXN_170), 
+                                      .Cin(XLXN_169), 
+                                      .CLR(Clear_IN), 
+                                      .Cout(XLXN_205), 
+                                      .Sum(XLXN_174));
+   AND2  XLXI_100 (.I0(XLXN_172), 
+                  .I1(XLXN_121), 
+                  .O(XLXN_170));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_101 (.A(XLXN_174), 
+                                       .B(XLXN_175), 
+                                       .Cin(XLXN_176), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(XLXN_206), 
+                                       .Sum(XLXN_178));
+   AND2  XLXI_102 (.I0(XLXN_204), 
+                  .I1(XLXN_92), 
+                  .O(XLXN_175));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_103 (.A(XLXN_178), 
+                                       .B(XLXN_179), 
+                                       .Cin(XLXN_180), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(XLXN_209), 
+                                       .Sum(XLXN_181));
+   AND2  XLXI_104 (.I0(XLXN_116), 
+                  .I1(XLXN_154), 
+                  .O(XLXN_179));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_105 (.A(XLXN_181), 
+                                       .B(XLXN_182), 
+                                       .Cin(XLXN_183), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(XLXN_212), 
+                                       .Sum(XLXN_184));
+   AND2  XLXI_106 (.I0(XLXN_158), 
+                  .I1(XLXN_155), 
+                  .O(XLXN_182));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_107 (.A(XLXN_184), 
+                                       .B(XLXN_185), 
+                                       .CLR(Clear_IN), 
+                                       .COUT(XLXN_218), 
+                                       .SUM(XLXN_271));
+   AND2  XLXI_108 (.I0(XLXN_217), 
+                  .I1(XLXN_222), 
+                  .O(XLXN_185));
+   AND2  XLXI_109 (.I0(A_IN[7]), 
+                  .I1(Clear_IN), 
+                  .O(XLXN_194));
+   AND2  XLXI_110 (.I0(B_IN[7]), 
+                  .I1(Clear_IN), 
+                  .O(XLXN_221));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_111 (.A(XLXN_192), 
+                                       .B(XLXN_193), 
+                                       .Cin(XLXN_199), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_200));
+   AND2  XLXI_112 (.I0(XLXN_195), 
+                  .I1(XLXN_194), 
+                  .O(XLXN_192));
+   AND2  XLXI_113 (.I0(XLXN_197), 
+                  .I1(XLXN_198), 
+                  .O(XLXN_193));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_114 (.A(XLXN_200), 
+                                       .B(XLXN_201), 
+                                       .Cin(XLXN_205), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_202));
+   AND2  XLXI_115 (.I0(XLXN_172), 
+                  .I1(XLXN_120), 
+                  .O(XLXN_201));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_116 (.A(XLXN_202), 
+                                       .B(XLXN_203), 
+                                       .Cin(XLXN_206), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_207));
+   AND2  XLXI_117 (.I0(XLXN_204), 
+                  .I1(XLXN_121), 
+                  .O(XLXN_203));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_118 (.A(XLXN_207), 
+                                       .B(XLXN_208), 
+                                       .Cin(XLXN_209), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_210));
+   AND2  XLXI_119 (.I0(XLXN_116), 
+                  .I1(XLXN_92), 
+                  .O(XLXN_208));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_120 (.A(XLXN_210), 
+                                       .B(XLXN_211), 
+                                       .Cin(XLXN_212), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_213));
+   AND2  XLXI_121 (.I0(XLXN_158), 
+                  .I1(XLXN_154), 
+                  .O(XLXN_211));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_122 (.A(XLXN_213), 
+                                       .B(XLXN_214), 
+                                       .Cin(XLXN_218), 
+                                       .CLR(Clear_IN), 
+                                       .Cout(), 
+                                       .Sum(XLXN_219));
+   AND2  XLXI_123 (.I0(XLXN_217), 
+                  .I1(XLXN_155), 
+                  .O(XLXN_214));
+   HA_Clear_MUSER_CAlCULATOR  XLXI_124 (.A(XLXN_219), 
+                                       .B(XLXN_220), 
+                                       .CLR(Clear_IN), 
+                                       .COUT(), 
+                                       .SUM(XLXN_273));
+   AND2  XLXI_125 (.I0(XLXN_221), 
+                  .I1(XLXN_222), 
+                  .O(XLXN_220));
+   AND2  XLXI_126 (.I0(Clear_IN), 
+                  .I1(XLXN_264), 
+                  .O(M[0]));
+   AND2  XLXI_127 (.I0(Clear_IN), 
+                  .I1(XLXN_265), 
+                  .O(M[1]));
+   AND2  XLXI_128 (.I0(Clear_IN), 
+                  .I1(XLXN_266), 
+                  .O(M[2]));
+   AND2  XLXI_129 (.I0(Clear_IN), 
+                  .I1(XLXN_267), 
+                  .O(M[3]));
+   AND2  XLXI_130 (.I0(Clear_IN), 
+                  .I1(XLXN_269), 
+                  .O(M[4]));
+   AND2  XLXI_131 (.I0(Clear_IN), 
+                  .I1(XLXN_270), 
+                  .O(M[5]));
+   AND2  XLXI_132 (.I0(Clear_IN), 
+                  .I1(XLXN_271), 
+                  .O(M[6]));
+   AND2  XLXI_133 (.I0(Clear_IN), 
+                  .I1(XLXN_273), 
+                  .O(M[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module ssubtractor_with_BUS_MUSER_CAlCULATOR(A_IN, 
+                                             B_IN, 
+                                             Clear_in, 
+                                             COUT_1, 
+                                             TOTAL);
+
+    input [7:0] A_IN;
+    input [7:0] B_IN;
+    input Clear_in;
+   output COUT_1;
+   output [7:0] TOTAL;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_61;
+   wire XLXN_63;
+   wire XLXN_79;
+   wire XLXN_80;
+   wire XLXN_81;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire XLXN_85;
+   wire XLXN_90;
+   wire XLXN_91;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_113;
+   
+   FA_Clear_MUSER_CAlCULATOR  XLXI_1 (.A(XLXN_6), 
+                                     .B(XLXN_5), 
+                                     .Cin(XLXN_80), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_79), 
+                                     .Sum(XLXN_91));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_2 (.A(XLXN_8), 
+                                     .B(XLXN_7), 
+                                     .Cin(XLXN_81), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_80), 
+                                     .Sum(XLXN_99));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_3 (.A(XLXN_10), 
+                                     .B(XLXN_9), 
+                                     .Cin(XLXN_98), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_81), 
+                                     .Sum(XLXN_100));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_4 (.A(XLXN_12), 
+                                     .B(XLXN_11), 
+                                     .Cin(XLXN_83), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_98), 
+                                     .Sum(XLXN_94));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_5 (.A(XLXN_14), 
+                                     .B(XLXN_13), 
+                                     .Cin(XLXN_84), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_83), 
+                                     .Sum(XLXN_95));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_6 (.A(XLXN_16), 
+                                     .B(XLXN_15), 
+                                     .Cin(XLXN_85), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_84), 
+                                     .Sum(XLXN_96));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_7 (.A(XLXN_18), 
+                                     .B(XLXN_17), 
+                                     .Cin(XLXN_113), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_85), 
+                                     .Sum(XLXN_97));
+   FA_Clear_MUSER_CAlCULATOR  XLXI_8 (.A(XLXN_4), 
+                                     .B(XLXN_3), 
+                                     .Cin(XLXN_79), 
+                                     .CLR(Clear_in), 
+                                     .Cout(XLXN_101), 
+                                     .Sum(XLXN_90));
+   AND2  XLXI_9 (.I0(XLXN_61), 
+                .I1(Clear_in), 
+                .O(XLXN_3));
+   AND2  XLXI_10 (.I0(Clear_in), 
+                 .I1(A_IN[7]), 
+                 .O(XLXN_4));
+   AND2  XLXI_11 (.I0(XLXN_63), 
+                 .I1(Clear_in), 
+                 .O(XLXN_5));
+   AND2  XLXI_12 (.I0(Clear_in), 
+                 .I1(A_IN[6]), 
+                 .O(XLXN_6));
+   AND2  XLXI_13 (.I0(XLXN_58), 
+                 .I1(Clear_in), 
+                 .O(XLXN_7));
+   AND2  XLXI_14 (.I0(Clear_in), 
+                 .I1(A_IN[5]), 
+                 .O(XLXN_8));
+   AND2  XLXI_15 (.I0(XLXN_57), 
+                 .I1(Clear_in), 
+                 .O(XLXN_9));
+   AND2  XLXI_16 (.I0(Clear_in), 
+                 .I1(A_IN[4]), 
+                 .O(XLXN_10));
+   AND2  XLXI_17 (.I0(XLXN_54), 
+                 .I1(Clear_in), 
+                 .O(XLXN_11));
+   AND2  XLXI_18 (.I0(Clear_in), 
+                 .I1(A_IN[3]), 
+                 .O(XLXN_12));
+   AND2  XLXI_19 (.I0(XLXN_53), 
+                 .I1(Clear_in), 
+                 .O(XLXN_13));
+   AND2  XLXI_20 (.I0(Clear_in), 
+                 .I1(A_IN[2]), 
+                 .O(XLXN_14));
+   AND2  XLXI_21 (.I0(XLXN_50), 
+                 .I1(Clear_in), 
+                 .O(XLXN_15));
+   AND2  XLXI_22 (.I0(Clear_in), 
+                 .I1(A_IN[1]), 
+                 .O(XLXN_16));
+   AND2  XLXI_23 (.I0(XLXN_49), 
+                 .I1(Clear_in), 
+                 .O(XLXN_17));
+   AND2  XLXI_24 (.I0(Clear_in), 
+                 .I1(A_IN[0]), 
+                 .O(XLXN_18));
+   INV  XLXI_49 (.I(B_IN[7]), 
+                .O(XLXN_61));
+   INV  XLXI_50 (.I(B_IN[6]), 
+                .O(XLXN_63));
+   INV  XLXI_51 (.I(B_IN[5]), 
+                .O(XLXN_58));
+   INV  XLXI_52 (.I(B_IN[4]), 
+                .O(XLXN_57));
+   INV  XLXI_53 (.I(B_IN[3]), 
+                .O(XLXN_54));
+   INV  XLXI_54 (.I(B_IN[2]), 
+                .O(XLXN_53));
+   INV  XLXI_55 (.I(B_IN[1]), 
+                .O(XLXN_50));
+   INV  XLXI_56 (.I(B_IN[0]), 
+                .O(XLXN_49));
+   AND2  XLXI_57 (.I0(Clear_in), 
+                 .I1(XLXN_90), 
+                 .O(TOTAL[7]));
+   AND2  XLXI_58 (.I0(Clear_in), 
+                 .I1(XLXN_91), 
+                 .O(TOTAL[6]));
+   AND2  XLXI_61 (.I0(Clear_in), 
+                 .I1(XLXN_94), 
+                 .O(TOTAL[3]));
+   AND2  XLXI_62 (.I0(Clear_in), 
+                 .I1(XLXN_95), 
+                 .O(TOTAL[2]));
+   AND2  XLXI_63 (.I0(Clear_in), 
+                 .I1(XLXN_96), 
+                 .O(TOTAL[1]));
+   AND2  XLXI_64 (.I0(Clear_in), 
+                 .I1(XLXN_97), 
+                 .O(TOTAL[0]));
+   AND2  XLXI_65 (.I0(XLXN_99), 
+                 .I1(Clear_in), 
+                 .O(TOTAL[5]));
+   AND2  XLXI_67 (.I0(Clear_in), 
+                 .I1(XLXN_101), 
+                 .O(COUT_1));
+   AND2  XLXI_68 (.I0(Clear_in), 
+                 .I1(XLXN_100), 
+                 .O(TOTAL[4]));
+   VCC  XLXI_70 (.P(XLXN_113));
+endmodule
+`timescale 1ns / 1ps
+
+module buff_8bit_MUSER_CAlCULATOR(A, 
+                                  Y);
+
+    input [7:0] A;
+   output [7:0] Y;
+   
+   
+   BUF  XLXI_1 (.I(A[7]), 
+               .O(Y[7]));
+   BUF  XLXI_2 (.I(A[6]), 
+               .O(Y[6]));
+   BUF  XLXI_3 (.I(A[5]), 
+               .O(Y[5]));
+   BUF  XLXI_4 (.I(A[4]), 
+               .O(Y[4]));
+   BUF  XLXI_5 (.I(A[3]), 
+               .O(Y[3]));
+   BUF  XLXI_6 (.I(A[2]), 
+               .O(Y[2]));
+   BUF  XLXI_7 (.I(A[1]), 
+               .O(Y[1]));
+   BUF  XLXI_8 (.I(A[0]), 
+               .O(Y[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module CAlCULATOR(A, 
+                  B, 
+                  E, 
+                  M0, 
+                  M1, 
+                  S0, 
+                  S1, 
+                  R, 
+                  Y);
+
+    input [7:0] A;
+    input [7:0] B;
+    input E;
+    input M0;
+    input M1;
+    input S0;
+    input S1;
+   output [7:0] R;
+   output [7:0] Y;
+   
+   wire [7:0] XLXN_39;
+   wire [7:0] XLXN_40;
+   wire [7:0] XLXN_41;
+   wire [7:0] XLXN_42;
+   wire [7:0] XLXN_52;
+   wire [7:0] XLXN_54;
+   wire [7:0] XLXN_65;
+   wire [7:0] XLXN_66;
+   wire [7:0] XLXN_67;
+   wire [7:0] XLXN_68;
+   
+   COMPLIMENT_8_BIT_MUSER_CAlCULATOR  XLXI_1 (.A(A[7:0]), 
+                                             .clr(E), 
+                                             .S(XLXN_40[7:0]));
+   buff_8bit_MUSER_CAlCULATOR  XLXI_2 (.A(A[7:0]), 
+                                      .Y(XLXN_39[7:0]));
+   COMPLIMENT_8_BIT_MUSER_CAlCULATOR  XLXI_3 (.A(B[7:0]), 
+                                             .clr(E), 
+                                             .S(XLXN_42[7:0]));
+   buff_8bit_MUSER_CAlCULATOR  XLXI_4 (.A(B[7:0]), 
+                                      .Y(XLXN_41[7:0]));
+   ADDER_with_BUS_MUSER_CAlCULATOR  XLXI_7 (.A_IN(XLXN_52[7:0]), 
+                                           .B_IN(XLXN_54[7:0]), 
+                                           .Clear_in(E), 
+                                           .Cout(), 
+                                           .TOTAL(XLXN_65[7:0]));
+   ssubtractor_with_BUS_MUSER_CAlCULATOR  XLXI_8 (.A_IN(XLXN_52[7:0]), 
+                                                 .B_IN(XLXN_54[7:0]), 
+                                                 .Clear_in(E), 
+                                                 .COUT_1(), 
+                                                 .TOTAL(XLXN_66[7:0]));
+   MULTIPLIER_MUSER_CAlCULATOR  XLXI_9 (.A_IN(XLXN_52[7:0]), 
+                                       .B_IN(XLXN_54[7:0]), 
+                                       .Clear_IN(E), 
+                                       .M(XLXN_67[7:0]));
+   DIV_MUSER_CAlCULATOR  XLXI_10 (.A(XLXN_39[7:0]), 
+                                 .B(XLXN_41[7:0]), 
+                                 .E(E), 
+                                 .S0(S0), 
+                                 .S1(S1), 
+                                 .Q(XLXN_68[7:0]), 
+                                 .R(R[7:0]));
+   MUX_2_1_BUS_MUSER_CAlCULATOR  XLXI_14 (.A(XLXN_39[7:0]), 
+                                         .B(XLXN_40[7:0]), 
+                                         .E(E), 
+                                         .S(S0), 
+                                         .Y(XLXN_52[7:0]));
+   MUX_2_1_BUS_MUSER_CAlCULATOR  XLXI_15 (.A(XLXN_41[7:0]), 
+                                         .B(XLXN_42[7:0]), 
+                                         .E(E), 
+                                         .S(S1), 
+                                         .Y(XLXN_54[7:0]));
+   MUX_4_1_BUS_MUSER_CAlCULATOR  XLXI_17 (.A(XLXN_65[7:0]), 
+                                         .B(XLXN_66[7:0]), 
+                                         .C(XLXN_67[7:0]), 
+                                         .D(XLXN_68[7:0]), 
+                                         .E(E), 
+                                         .S0(M0), 
+                                         .S1(M1), 
+                                         .Y(Y[7:0]));
+endmodule
