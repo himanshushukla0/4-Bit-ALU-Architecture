@@ -5,7 +5,7 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Gate_Level-orange)
 
 > [!NOTE]
-> **Component Library:** This system integrates custom arithmetic modules developed and verified in my [Digital-Logic-and-Verilog-Design](https://github.com/himanshushukla0/Digital-Logic-and-Verilog-Design) library.
+> **Component Library:** This system integrates custom arithmetic modules developed and verified in my [Digital-Logic-and-Verilog-Design](https://github.com/himanshushukla0/Digital-Logic-Design) library.
 
 ---
 
