@@ -1,54 +1,62 @@
-# 🧮 4-Bit Hardware Calculator (ALU System Architecture)
+# 🚀 Ausome 4-bit ALU
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Platform](https://img.shields.io/badge/Platform-Xilinx_ISE-blue)
-![Architecture](https://img.shields.io/badge/Architecture-Gate_Level-orange)
+An incredibly amazing ("ausome") 4-bit Arithmetic Logic Unit (ALU) implemented in Verilog. This project provides a fully functional ALU capable of performing basic arithmetic and logical operations, complete with a comprehensive testbench.
 
-> [!NOTE]
-> **Component Library:** This system integrates custom arithmetic modules developed and verified in my [Digital-Logic-and-Verilog-Design](https://github.com/himanshushukla0/Digital-Logic-Design) library.
+## 🌟 Features
 
----
+* **4-bit Data Path:** Processes 4-bit inputs (`a` and `b`) to produce a 4-bit `result`.
+* **8 Operations:** Supports a versatile set of 8 distinct operations.
+* **Flags:** Provides `carry_out` (for arithmetic and shift operations) and `zero` flags.
+* **Fully Tested:** Includes a Verilog testbench (`tb_alu.v`) to ensure correctness.
+* **Easy Build:** Uses a simple `Makefile` for compiling and running with Icarus Verilog (`iverilog`).
 
-## 🚀 Introduction & Executive Summary
-This project represents a complete, system-level Arithmetic Logic Unit (ALU) designed entirely from fundamental logic gates using a bottom-up methodology. It integrates custom-built 4-bit adders, subtractors, array multipliers, and universal dividers into a cohesive calculator architecture. 
+## 🛠️ Supported Operations
 
-By utilizing standardized 8-bit overarching data buses and a central multiplexed control unit, this system dynamically routes input operands to execute selectable mathematical operations, mirroring the core instruction decoding processes found in real-world microprocessors.
+| Opcode | Operation | Description |
+| :--- | :--- | :--- |
+| `000` | ADD | `a + b` |
+| `001` | SUB | `a - b` |
+| `010` | AND | `a & b` |
+| `011` | OR | `a \| b` |
+| `100` | XOR | `a ^ b` |
+| `101` | NOT | `~a` (Bitwise NOT of A) |
+| `110` | SHL | `a << 1` (Shift Left Logical) |
+| `111` | SHR | `a >> 1` (Shift Right Logical) |
 
----
+## 🏗️ Block Diagram
 
-## 🏗️ System Architecture
+```mermaid
+graph TD
+    A(Input A 4-bit) --> ALU{ALU Core}
+    B(Input B 4-bit) --> ALU
+    OP(Opcode 3-bit) --> ALU
+    
+    ALU --> RES(Result 4-bit)
+    ALU --> CO(Carry Out 1-bit)
+    ALU --> Z(Zero Flag 1-bit)
+```
 
-Unlike isolated components, this calculator requires a highly structured data path. Below is the top-level schematic acting as the system's block diagram:
+## 🚀 Getting Started
 
-![System Block Diagram](CALCULATOR.png)
+### Prerequisites
 
-**Architectural Highlights:**
-1. **Parallel Execution:** Input operands flow into all four arithmetic execution cores simultaneously.
-2. **Instruction Decoding:** The final `MUX_4_1_BUS` acts as the control unit, using select lines to determine which core's calculated answer is passed to the final output bus.
-3. **Signed Logic Integration:** Includes 2's complement buffers and input multiplexers to handle both signed and unsigned data effectively.
+You will need an environment with `make` and Icarus Verilog (`iverilog`) installed.
 
----
+### Running the Tests
 
-## 🕹️ Instruction Set (Operation Codes)
+To compile and run the simulation, simply execute the following command in your terminal:
 
-To operate the calculator, a 2-bit control signal (`M1, M0`) is used to route the correct mathematical operation to the final output `Y(7:0)`.
+```bash
+make
+```
 
-| Op-Code (M1, M0) | Selected Operation | Mathematical Expression | Active Output Format |
-| :---: | :--- | :--- | :--- |
-| `0 0` | **Addition** | Output = A + B | 8-Bit Sum |
-| `0 1` | **Subtraction** | Output = A - B | 8-Bit Difference |
-| `1 0` | **Multiplication** | Output = A * B | 8-Bit Product |
-| `1 1` | **Division** | Output = A / B | 4-Bit Quotient, 4-Bit Remainder |
+This command will:
+1. Compile `alu.v` and `tb_alu.v` using `iverilog`.
+2. Generate an executable named `alu_test`.
+3. Run the executable using `vvp`, which will print the test results to the console.
 
----
+To clean up the generated files, run:
 
-## 📊 Simulation & Verification
-
-Hardware design requires rigorous verification. Below is the ISim behavioral simulation proving the routing and execution of the ALU control logic.
-
-![Simulation Waveform](SIM_CALCULATOR.png)
-
-**Verification Process:**
-* The input operands `A` and `B` are established.
-* The operation select lines (`M1, M0`) are toggled sequentially.
-* The output bus cleanly transitions between the Sum, Difference, Product, and Quotient without any logic hazards or floating states, proving the multiplexer routing is flawless.
+```bash
+make clean
+```
